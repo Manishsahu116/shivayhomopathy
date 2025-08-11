@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shivay Homeoclinic</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="/SHIVAY-1.png" type="image/png" />
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md fixed top-0 w-full z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <div class="flex items-center space-x-3">
+        <img src="/SHIVAY-1.png" alt="Shivay Homeoclinic Logo" class="w-12 h-12 rounded-full border">
+        <div>
+          <h1 class="text-xl font-bold text-green-700">Shivay Homeoclinic</h1>
+          <p class="text-sm text-gray-500">24/7 Homeopathy Care</p>
+        </div>
+      </div>
+      <div class="space-x-4 hidden md:flex">
+        <a href="tel:+911234567890" class="text-green-700 hover:text-green-900"><i class="fas fa-phone"></i></a>
+        <a href="https://wa.me/911234567890" class="text-green-600 hover:text-green-800"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://instagram.com/" class="text-pink-500 hover:text-pink-700"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-green-200 to-green-400 pt-24 pb-12 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-green-900">Fast & Effective Homeopathy Treatment</h2>
+    <p class="mt-3 text-lg text-gray-700">By Dr. Drasti Prajapati (BHMS)</p>
+    <p class="mt-2">Call or WhatsApp anytime for consultation</p>
+    <a href="https://wa.me/911234567890" class="mt-5 inline-block bg-green-700 text-white px-6 py-3 rounded-lg shadow hover:bg-green-800">
+      <i class="fab fa-whatsapp"></i> Chat Now
+    </a>
+  </section>
+
+  <!-- Treatments -->
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <h3 class="text-2xl font-bold mb-8 text-center">Our Homeopathy Treatments</h3>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 shadow rounded-lg text-center">
+        <i class="fas fa-heartbeat text-green-600 text-4xl mb-4"></i>
+        <h4 class="font-semibold mb-2">Chronic Diseases</h4>
+        <p>Holistic care for long-term conditions like asthma, diabetes, arthritis.</p>
+      </div>
+      <div class="bg-white p-6 shadow rounded-lg text-center">
+        <i class="fas fa-allergies text-green-600 text-4xl mb-4"></i>
+        <h4 class="font-semibold mb-2">Allergy Relief</h4>
+        <p>Safe, natural remedies to manage seasonal & chronic allergies.</p>
+      </div>
+      <div class="bg-white p-6 shadow rounded-lg text-center">
+        <i class="fas fa-brain text-green-600 text-4xl mb-4"></i>
+        <h4 class="font-semibold mb-2">Stress & Anxiety</h4>
+        <p>Gentle treatments to balance mental health and emotional well-being.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="bg-green-50 py-12">
+    <div class="max-w-xl mx-auto text-center">
+      <h3 class="text-2xl font-bold mb-6">Get in Touch</h3>
+      <p class="mb-4">We’re here 24/7 to answer your queries</p>
+      <div class="flex justify-center space-x-6 text-2xl">
+        <a href="tel:+911234567890" class="text-green-700 hover:text-green-900"><i class="fas fa-phone"></i></a>
+        <a href="https://wa.me/911234567890" class="text-green-600 hover:text-green-800"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://instagram.com/" class="text-pink-500 hover:text-pink-700"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Contact Bar for Mobile -->
+  <div class="fixed bottom-0 left-0 right-0 bg-white shadow-lg p-3 flex justify-around items-center text-xl md:hidden">
+    <a href="tel:+911234567890" class="text-green-700"><i class="fas fa-phone"></i></a>
+    <a href="https://wa.me/911234567890" class="text-green-600"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://instagram.com/" class="text-pink-500"><i class="fab fa-instagram"></i></a>
+  </div>
+
+  <script>
+  function sendToWhatsApp(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const message = document.getElementById("message").value;
+
+    const whatsappNumber = "919876543210"; // Replace with your clinic's WhatsApp number (without + sign)
+
+    const url = `https://wa.me/${whatsappNumber}?text=` +
+                `Name: ${encodeURIComponent(name)}%0a` +
+                `Phone: ${encodeURIComponent(phone)}%0a` +
+                `Message: ${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank").focus();
+  }
+
+  document.getElementById("contactForm").addEventListener("submit", sendToWhatsApp);
+</script>
+
+
+</body>
+</html>
