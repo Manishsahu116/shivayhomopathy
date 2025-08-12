@@ -1,106 +1,442 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shivay Homeoclinic</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="icon" href="/SHIVAY-1.png" type="image/png" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Shivay Clinic — Online Homeopathy</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="icon" href="/SHIVAY-1.png" type="image/png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        /* small custom tweaks */
+        :root {
+            --brand-orange: #ff7a18;
+            --brand-blue: #0b65c2;
+        }
+        .btn-brand {
+            background: linear-gradient(90deg, var(--brand-orange), var(--brand-blue));
+            color: white;
+        }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- Header -->
-  <header class="bg-white shadow-md fixed top-0 w-full z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-      <div class="flex items-center space-x-3">
-        <img src="/SHIVAY-1.png" alt="Shivay Homeoclinic Logo" class="w-12 h-12 rounded-full border">
-        <div>
-          <h1 class="text-xl font-bold text-green-700">Shivay Homeoclinic</h1>
-          <p class="text-sm text-gray-500">24/7 Homeopathy Care</p>
+    <header class="bg-white shadow">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="/SHIVAY-1.png" alt="Shivay Clinic Logo" class="h-12 w-auto object-contain" onerror="this.style.display='none'" />
+                <div>
+                    <h1 class="text-xl font-bold" style="color:var(--brand-blue)">Shivay Clinic</h1>
+                    <p class="text-sm text-gray-500">Trusted online homeopathy consultations</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3 mt-4 md:mt-0">
+                <div class="text-right mr-2 hidden sm:block">
+                    <p class="text-xs text-gray-500">Consultation</p>
+                    <p class="font-semibold text-lg" style="color:var(--brand-orange)">₹200</p>
+                </div>
+
+                <a id="whatsappTop" href="https://wa.me/7984573040" target="_blank"
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-lg shadow text-sm font-semibold border">
+                    <i class="fab fa-whatsapp text-green-600 text-lg"></i>
+                    Chat on WhatsApp
+                </a>
+
+                <a href="https://instagram.com/shivayclinic" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-white btn-brand text-sm">
+                    <i class="fab fa-instagram"></i> Contact (Instagram)
+                </a>
+            </div>
         </div>
-      </div>
-      <div class="space-x-4 hidden md:flex">
-        <a href="tel:+911234567890" class="text-green-700 hover:text-green-900"><i class="fas fa-phone"></i></a>
-        <a href="https://wa.me/911234567890" class="text-green-600 hover:text-green-800"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://instagram.com/" class="text-pink-500 hover:text-pink-700"><i class="fab fa-instagram"></i></a>
-      </div>
+    </header>
+
+    <section class="bg-gradient-to-tr from-orange-50 to-blue-50 py-12">
+        <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-8 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-extrabold" style="color:var(--brand-blue)">Online Homeopathy Consultations — Shivay Clinic</h2>
+                <p class="mt-3 text-gray-700 max-w-xl">Consult experienced Homeopathy doctors from home. Personalized treatment plans, medicine guidance & follow-up care — all online. Quick, affordable, and secure.</p>
+
+                <ul class="mt-6 grid sm:grid-cols-2 gap-3">
+                    <li class="flex items-start gap-3">
+                        <span class="text-2xl" style="color:var(--brand-orange)"><i class="fas fa-user-md"></i></span>
+                        <div>
+                            <div class="font-semibold">Certified Doctors</div>
+                            <div class="text-sm text-gray-600">B.H.M.S doctors with clinical experience</div>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-2xl" style="color:var(--brand-orange)"><i class="fas fa-mobile-alt"></i></span>
+                        <div>
+                            <div class="font-semibold">100% Online</div>
+                            <div class="text-sm text-gray-600">WhatsApp / video / phone consultations</div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="mt-6 flex flex-wrap gap-3">
+                    <button onclick="scrollToForm()" class="px-5 py-3 rounded-lg text-white btn-brand shadow hover:opacity-95">
+                        <i class="fab fa-whatsapp mr-2"></i> Book on WhatsApp
+                    </button>
+
+                    <a href="https://instagram.com/shivayclinic" target="_blank" class="px-5 py-3 rounded-lg border border-gray-300 text-sm font-semibold flex items-center gap-2">
+                        <i class="fab fa-instagram text-pink-500"></i> Message on Instagram
+                    </a>
+                </div>
+
+                <p class="mt-4 text-sm text-gray-500">Consultation fee: <span class="font-semibold" style="color:var(--brand-orange)">₹200</span> — Includes diagnosis & treatment plan. Medicines can be home-delivered.</p>
+            </div>
+
+            <div class="bg-white rounded-xl p-6 shadow mt-8 lg:mt-0">
+                <h3 class="font-bold text-lg" style="color:var(--brand-blue)">Quick Consultation Form</h3>
+                <p class="text-sm text-gray-600 mb-4">Fill details below — we'll message you on WhatsApp to confirm.</p>
+
+                <form id="consultForm" class="space-y-3" onsubmit="handleFormSubmit(event)">
+                    <div>
+                        <label class="text-sm font-medium">Full name</label>
+                        <input required id="name" class="mt-1 w-full border rounded px-3 py-2" placeholder="e.g. Riya Sharma" />
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="text-sm font-medium">Age</label>
+                            <input id="age" type="number" min="0" class="mt-1 w-full border rounded px-3 py-2" placeholder="e.g. 28" />
+                        </div>
+                        <div>
+                            <label class="text-sm font-medium">Mobile (WhatsApp)</label>
+                            <input required id="mobile" class="mt-1 w-full border rounded px-3 py-2" placeholder="e.g. 9876543210" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="text-sm font-medium">Symptoms / Problem (brief)</label>
+                        <textarea required id="symptoms" rows="3" class="mt-1 w-full border rounded px-3 py-2" placeholder="Describe your problem, duration, any medicines tried..."></textarea>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="text-sm font-medium">Preferred Doctor (optional)</label>
+                            <select id="doctor" class="mt-1 w-full border rounded px-3 py-2">
+                                <option value="">Any Doctor</option>
+                                <option>Dr. Drasti Prajapati (B.H.M.S)</option>
+                                <option>Dr. Meha Modi</option>
+                                <option>Dr. Dhruv Sabhadiya</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="text-sm font-medium">Preferred time (optional)</label>
+                            <input id="ptime" type="text" class="mt-1 w-full border rounded px-3 py-2" placeholder="e.g. Mon 6-8PM" />
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <input id="consent" type="checkbox" required class="h-4 w-4" />
+                        <label class="text-sm">I consent to share my details with Shivay Clinic and receive messages on WhatsApp.</label>
+                    </div>
+
+                    <div class="flex flex-wrap gap-3">
+                        <button type="submit" class="px-4 py-2 rounded-lg shadow text-white btn-brand">
+                            <i class="fab fa-whatsapp mr-2"></i> Send via WhatsApp
+                        </button>
+
+                        <a href="https://instagram.com/shivayclinic" target="_blank" class="px-4 py-2 rounded-lg border flex items-center gap-2">
+                            <i class="fab fa-instagram text-pink-500"></i> Contact on Instagram
+                        </a>
+                    </div>
+
+                    <p id="formNote" class="text-xs text-gray-500 mt-2">After you submit, WhatsApp will open with a pre-filled message. Replace/confirm details and send.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 py-12">
+        <div class="grid lg:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-2xl font-bold mb-4" style="color:var(--brand-blue)">Benefits of Homeopathy</h3>
+                <ul class="space-y-3">
+                    <li class="flex gap-3">
+                        <span class="text-2xl" style="color:var(--brand-orange)"><i class="fas fa-leaf"></i></span>
+                        <div>
+                            <div class="font-semibold">Holistic & Gentle</div>
+                            <div class="text-sm text-gray-600">Treats root cause & patient as a whole — mind, body & lifestyle.</div>
+                        </div>
+                    </li>
+
+                    <li class="flex gap-3">
+                        <span class="text-2xl" style="color:var(--brand-orange)"><i class="fas fa-pills"></i></span>
+                        <div>
+                            <div class="font-semibold">Minimal Side-effects</div>
+                            <div class="text-sm text-gray-600">Safe for children, elderly and pregnant women when advised by a doctor.</div>
+                        </div>
+                    </li>
+
+                    <li class="flex gap-3">
+                        <span class="text-2xl" style="color:var(--brand-orange)"><i class="fas fa-user-friends"></i></span>
+                        <div>
+                            <div class="font-semibold">Personalized Care</div>
+                            <div class="text-sm text-gray-600">Treatment tailored to your symptoms, history and constitution.</div>
+                        </div>
+                    </li>
+
+                    <li class="flex gap-3">
+                        <span class="text-2xl" style="color:var(--brand-orange)"><i class="fas fa-people-arrows"></i></span>
+                        <div>
+                            <div class="font-semibold">Long-term Improvement</div>
+                            <div class="text-sm text-gray-600">Focus on sustained recovery rather than temporary relief.</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-2xl font-bold mb-4" style="color:var(--brand-blue)">Conditions We Treat (Common)</h3>
+                <div class="grid sm:grid-cols-2 gap-4 text-sm text-gray-700">
+                    <div class="flex items-start gap-2">
+                        <span class="text-xl text-orange-500"><i class="fas fa-hand-holding-heart"></i></span>
+                        <div>
+                            <h4 class="font-semibold">Skin</h4>
+                            <p>Acne, Eczema, Psoriasis, Fungal infections, Hives</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-xl text-orange-500"><i class="fas fa-user-md"></i></span>
+                        <div>
+                            <h4 class="font-semibold">Hair</h4>
+                            <p>Hair fall, Alopecia, dandruff, scalp conditions</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-xl text-orange-500"><i class="fas fa-lungs"></i></span>
+                        <div>
+                            <h4 class="font-semibold">Respiratory</h4>
+                            <p>Allergies, Asthma, Chronic cough, Sinusitis</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-xl text-orange-500"><i class="fas fa-child"></i></span>
+                        <div>
+                            <h4 class="font-semibold">Women & Child Health</h4>
+                            <p>PCOD support, Menstrual issues, Pediatric complaints</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-xl text-orange-500"><i class="fa-solid fa-circle-h fa-stomach"></i></span>
+                        <div>
+                            <h4 class="font-semibold">Digestive & Metabolic</h4>
+                            <p>IBS, acidity, weight management</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-xl text-orange-500"><i class="fas fa-brain"></i></span>
+                        <div>
+                            <h4 class="font-semibold">Lifestyle & Stress</h4>
+                            <p>Migraine, anxiety, sleep issues</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-500 mt-3">This list is illustrative — share detailed history for personalized advice.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gradient-to-r from-orange-50 to-blue-50 py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <h3 class="text-2xl font-bold text-center mb-6" style="color:var(--brand-blue)">Why Shivay Clinic?</h3>
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg p-5 shadow flex gap-4">
+                    <span class="text-3xl" style="color:var(--brand-orange)"><i class="fas fa-user-md"></i></span>
+                    <div>
+                        <div class="font-semibold">Certified & Experienced</div>
+                        <div class="text-sm text-gray-600">Qualified BHMS doctors with years of clinical experience.</div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg p-5 shadow flex gap-4">
+                    <span class="text-3xl" style="color:var(--brand-orange)"><i class="fas fa-clock"></i></span>
+                    <div>
+                        <div class="font-semibold">Quick Appointments</div>
+                        <div class="text-sm text-gray-600">Fast response via WhatsApp and timely consultations.</div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg p-5 shadow flex gap-4">
+                    <span class="text-3xl" style="color:var(--brand-orange)"><i class="fas fa-prescription-bottle-alt"></i></span>
+                    <div>
+                        <div class="font-semibold">Personalized Treatment Plans</div>
+                        <div class="text-sm text-gray-600">Detailed diagnosis and customized medicine plans for you.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 py-12">
+        <h3 class="text-2xl font-bold text-center mb-6" style="color:var(--brand-blue)">Our Doctors</h3>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg text-center shadow">
+                <span class="text-6xl text-gray-400 block mx-auto mb-3"><i class="fas fa-user-circle"></i></span>
+                <div class="font-semibold">Dr. Drasti Prajapati</div>
+                <div class="text-sm text-gray-500">(B.H.M.S)</div>
+                <div class="text-xs text-gray-600 mt-2">Specialist in dermatology & chronic conditions.</div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg text-center shadow">
+                <span class="text-6xl text-gray-400 block mx-auto mb-3"><i class="fas fa-user-circle"></i></span>
+                <div class="font-semibold">Dr. Meha Modi</div>
+                <div class="text-sm text-gray-500">BHMS</div>
+                <div class="text-xs text-gray-600 mt-2">Focus on women & pediatric care.</div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg text-center shadow">
+                <span class="text-6xl text-gray-400 block mx-auto mb-3"><i class="fas fa-user-circle"></i></span>
+                <div class="font-semibold">Dr. Dhruv Sabhadiya</div>
+                <div class="text-sm text-gray-500">BHMS</div>
+                <div class="text-xs text-gray-600 mt-2">Special interest in respiratory & allergy care.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-10">
+        <div class="max-w-4xl mx-auto px-4">
+            <h3 class="text-2xl font-bold text-center mb-6" style="color:var(--brand-blue)">Patient Feedback</h3>
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide p-6 border rounded-lg">
+                        <div class="flex gap-4 items-start">
+                            <div class="p-2 w-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-bold">AS</div>
+                            <div>
+                                <div class="font-semibold">Anita S.</div>
+                                <div class="text-sm text-gray-600">"Quick response and effective treatment. The follow-ups were very helpful."</div>
+                                <div class="text-xs text-gray-400 mt-2">Hair fall — improved in 3 months</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide p-6 border rounded-lg">
+                        <div class="flex gap-4 items-start">
+                            <div class="p-2 w-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold">RK</div>
+                            <div>
+                                <div class="font-semibold">Rohit K.</div>
+                                <div class="text-sm text-gray-600">"Very professional doctors. Medicines were delivered to my home."</div>
+                                <div class="text-xs text-gray-400 mt-2">Acne & skin care</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide p-6 border rounded-lg">
+                        <div class="flex gap-4 items-start">
+                            <div class="p-2 w-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-bold">PS</div>
+                            <div>
+                                <div class="font-semibold">Pooja S.</div>
+                                <div class="text-sm text-gray-600">"Affordable and compassionate care — recommended."</div>
+                                <div class="text-xs text-gray-400 mt-2">Migraine & stress</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination mt-6"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-6">
+            <div>
+                <h4 class="font-bold">Shivay Clinic</h4>
+                <p class="text-sm text-gray-300">Online homeopathy consultations | Trusted doctors | Personalized care</p>
+            </div>
+            <div>
+                <h5 class="font-semibold">Contact</h5>
+                <p class="text-sm text-gray-300">WhatsApp: <a class="text-orange-300" href="https://wa.me/7984573040" target="_blank">7984573040</a></p>
+                <p class="text-sm text-gray-300">Instagram: <a class="text-orange-300" href="https://instagram.com/shivayclinic" target="_blank">@shivayclinic</a></p>
+            </div>
+            <div>
+                <h5 class="font-semibold">Note</h5>
+                <p class="text-sm text-gray-300">Consultation charges ₹200 per session. Please provide accurate details while booking.</p>
+            </div>
+        </div>
+
+        <div class="mt-6 text-center text-sm text-gray-500">© <span id="year"></span> Shivay Clinic. All rights reserved.</div>
+    </footer>
+
+    <div class="fixed right-5 bottom-5 flex flex-col gap-3 z-50">
+        <a href="https://wa.me/7984573040" target="_blank" class="bg-green-500 p-4 rounded-full shadow-lg text-white">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+        <a href="https://instagram.com/shivayclinic" target="_blank" class="bg-gradient-to-br from-pink-500 to-purple-500 p-4 rounded-full shadow-lg text-white">
+            <i class="fab fa-instagram text-2xl"></i>
+        </a>
     </div>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-green-200 to-green-400 pt-24 pb-12 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-green-900">Fast & Effective Homeopathy Treatment</h2>
-    <p class="mt-3 text-lg text-gray-700">By Dr. Drasti Prajapati (BHMS)</p>
-    <p class="mt-2">Call or WhatsApp anytime for consultation</p>
-    <a href="https://wa.me/911234567890" class="mt-5 inline-block bg-green-700 text-white px-6 py-3 rounded-lg shadow hover:bg-green-800">
-      <i class="fab fa-whatsapp"></i> Chat Now
-    </a>
-  </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Set year
+        document.getElementById('year').textContent = new Date().getFullYear();
 
-  <!-- Treatments -->
-  <section class="max-w-6xl mx-auto px-4 py-12">
-    <h3 class="text-2xl font-bold mb-8 text-center">Our Homeopathy Treatments</h3>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-white p-6 shadow rounded-lg text-center">
-        <i class="fas fa-heartbeat text-green-600 text-4xl mb-4"></i>
-        <h4 class="font-semibold mb-2">Chronic Diseases</h4>
-        <p>Holistic care for long-term conditions like asthma, diabetes, arthritis.</p>
-      </div>
-      <div class="bg-white p-6 shadow rounded-lg text-center">
-        <i class="fas fa-allergies text-green-600 text-4xl mb-4"></i>
-        <h4 class="font-semibold mb-2">Allergy Relief</h4>
-        <p>Safe, natural remedies to manage seasonal & chronic allergies.</p>
-      </div>
-      <div class="bg-white p-6 shadow rounded-lg text-center">
-        <i class="fas fa-brain text-green-600 text-4xl mb-4"></i>
-        <h4 class="font-semibold mb-2">Stress & Anxiety</h4>
-        <p>Gentle treatments to balance mental health and emotional well-being.</p>
-      </div>
-    </div>
-  </section>
+        // Scroll helper
+        function scrollToForm() {
+            document.getElementById('consultForm').scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        }
 
-  <!-- Contact -->
-  <section class="bg-green-50 py-12">
-    <div class="max-w-xl mx-auto text-center">
-      <h3 class="text-2xl font-bold mb-6">Get in Touch</h3>
-      <p class="mb-4">We’re here 24/7 to answer your queries</p>
-      <div class="flex justify-center space-x-6 text-2xl">
-        <a href="tel:+911234567890" class="text-green-700 hover:text-green-900"><i class="fas fa-phone"></i></a>
-        <a href="https://wa.me/911234567890" class="text-green-600 hover:text-green-800"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://instagram.com/" class="text-pink-500 hover:text-pink-700"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-  </section>
+        // Handle form submit: open WhatsApp with pre-filled message
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const age = document.getElementById('age').value.trim();
+            const mobile = document.getElementById('mobile').value.trim();
+            const symptoms = document.getElementById('symptoms').value.trim();
+            const doctor = document.getElementById('doctor').value;
+            const ptime = document.getElementById('ptime').value.trim();
 
-  <!-- Floating Contact Bar for Mobile -->
-  <div class="fixed bottom-0 left-0 right-0 bg-white shadow-lg p-3 flex justify-around items-center text-xl md:hidden">
-    <a href="tel:+911234567890" class="text-green-700"><i class="fas fa-phone"></i></a>
-    <a href="https://wa.me/911234567890" class="text-green-600"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://instagram.com/" class="text-pink-500"><i class="fab fa-instagram"></i></a>
-  </div>
+            if (!name || !mobile || !symptoms) {
+                alert('Please fill name, mobile and symptoms.');
+                return;
+            }
 
-  <script>
-  function sendToWhatsApp(event) {
-    event.preventDefault();
+            // Build message
+            let message = `Shivay Clinic - New Appointment Request%0A`;
+            message += `Name: ${encodeURIComponent(name)}%0A`;
+            if (age) message += `Age: ${encodeURIComponent(age)}%0A`;
+            message += `Mobile: ${encodeURIComponent(mobile)}%0A`;
+            message += `Symptoms: ${encodeURIComponent(symptoms)}%0A`;
+            if (doctor) message += `Preferred Doctor: ${encodeURIComponent(doctor)}%0A`;
+            if (ptime) message += `Preferred Time: ${encodeURIComponent(ptime)}%0A`;
+            message += `Consultation Fee: ₹200%0A`;
 
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
-    const message = document.getElementById("message").value;
+            // Choose your clinic phone (international format without +). Replace as needed.
+            const clinicNumber = '7984573040';
 
-    const whatsappNumber = "919876543210"; // Replace with your clinic's WhatsApp number (without + sign)
+            // Open WhatsApp (web or app)
+            const waUrl = `https://wa.me/${clinicNumber}?text=${message}`;
+            window.open(waUrl, '_blank');
+        }
 
-    const url = `https://wa.me/${whatsappNumber}?text=` +
-                `Name: ${encodeURIComponent(name)}%0a` +
-                `Phone: ${encodeURIComponent(phone)}%0a` +
-                `Message: ${encodeURIComponent(message)}`;
-
-    window.open(url, "_blank").focus();
-  }
-
-  document.getElementById("contactForm").addEventListener("submit", sendToWhatsApp);
-</script>
-
-
+        // Init Swiper
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 16,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1.1
+                },
+                900: {
+                    slidesPerView: 2
+                },
+            }
+        });
+    </script>
 </body>
 </html>
